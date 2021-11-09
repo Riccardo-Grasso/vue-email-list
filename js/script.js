@@ -5,7 +5,6 @@ new Vue({
     data: {
         url: "https://flynn.boolean.careers/exercises/api/random/mail",
         mailList: [],
-        mailRandom: "",
         pendingMail: 0
     },
     methods: {
@@ -18,9 +17,11 @@ new Vue({
                 this.pendingMail++;
 
                 axios.get(this.url).then((myResponse) => {
-                    mailRandom = myResponse.data.response;
+
+                    const mailRandom = myResponse.data.response;
                     this.mailList.push(mailRandom);
                     this.pendingMail--;
+                    console.log(this.mailList);
                 });
             }
         },
