@@ -11,7 +11,6 @@ new Vue({
 
         generaMail() {
             this.mailList = [];
-
             for (i = 0; i < 10; i++) {
 
                 this.pendingMail++;
