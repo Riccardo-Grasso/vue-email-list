@@ -11,12 +11,13 @@ new Vue({
 
         generaMail() {
 
+
             for (i = 0; i < 10; i++) {
 
                 this.pendingMail++;
 
                 axios.get(this.url).then((myResponse) => {
-
+                    mailList = [];
                     const mailRandom = myResponse.data.response;
                     this.mailList.push(mailRandom);
                     this.pendingMail--;
