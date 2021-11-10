@@ -14,9 +14,9 @@
 
 <body>
     <div class="container text-center" id="root">
-        <h1>LISTA EMAIL</h1>
-        <button class="btn btn-primary" @click="generaMail">Genera Lista</button>
-        <ul>
+        <h1 class="my-3">LISTA EMAIL</h1>
+        <button class="btn btn-primary my-3" @click="generaMail">Genera Lista</button>
+        <ul class="mt-5">
             <li v-for="randomMail in mailList">
                 {{randomMail}}
             </li>
